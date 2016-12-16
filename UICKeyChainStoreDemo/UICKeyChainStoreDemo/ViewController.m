@@ -43,6 +43,7 @@
 }
 - (void)StoreInformation{
     [_textField resignFirstResponder];
+    NSLog(@"%@",_textField.text);
     //初始化
     UICKeyChainStore *keychainStore = [UICKeyChainStore keyChainStore];
     [keychainStore setString:_textField.text forKey:@"testString"];//存储
